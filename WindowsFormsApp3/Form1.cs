@@ -24,11 +24,10 @@ namespace WindowsFormsApp3
         {
       Graphics g = e.Graphics;
 
-      
 
-      
 
-      SolidBrush brush1 = new SolidBrush(Color.LightBlue);
+
+      SolidBrush brush1 = new SolidBrush(Color.Black);
       Rectangle[] rects1 = { new Rectangle(0, 0, 1000, 1000) };
       e.Graphics.FillRectangles(brush1, rects1);
 
@@ -39,13 +38,23 @@ namespace WindowsFormsApp3
       // Fill rectangles to screen.
       e.Graphics.FillRectangles(blueBrush, rects);
 
-    
+      SolidBrush brush2 = new SolidBrush(Color.Yellow);
+      Rectangle[] rects2 = { new Rectangle(200, 200, 150, 100), new Rectangle(200, 350, 150, 100), new Rectangle(480, 450, 30, 50) };
+      e.Graphics.FillRectangles(brush2, rects2);
+
+     
+
+      SolidBrush brush3 = new SolidBrush(Color.Brown);
+      Rectangle[] rects3 = { new Rectangle(475, 450, 50, 100) };
+      e.Graphics.FillRectangles(brush3, rects3);
+
 
       g.DrawLine(new Pen(Brushes.Black, 2), 10, 4* i +20, 500, 4*i+20);
       
       g.DrawRectangle(new Pen(Brushes.Blue, 2), 475, 450, 50, 100);
-      g.DrawEllipse(new Pen(Brushes.Black, 4), 200, 200, 60, 60);
-      
+      g.DrawRectangle(new Pen(Brushes.Yellow, 2), 480, 450, 30, 50);
+
+
       //пунктирная линия
       float[] dashValues = { 5, 2, 15, 4 };
       Pen blackPen = new Pen(Color.Black, 5);
